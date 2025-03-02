@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- tailwind CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- intellisense -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- daisy UI CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              common: "#FFDC26",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="font-poppins">
+    <header>
+      <nav
+        class="flex rounded-2xl justify-between items-center mt-4 h-20 bg-[#b0b2b85e]"
+      >
+        <div class="logo flex justify-center items-center pl-10">
+          <img src="./assets/logo.png" alt="" />
+          <div class="logo-name">
+            <h1 class="text-[30px]">
+              Dev<span class="colorful-text font-bold text-black">Board</span>
+            </h1>
+          </div>
+        </div>
+        <div class="home">
+          <button class="btn mr-10 bg-blue-700 text-white">
+            <a href="./index.html">Back to Desk</a>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1 class="text-[36px] font-bold ml-[700px] mt-8">Blogs</h1>
+        <div class="blog-container">
+          <div class="blog bg-slate-300 rounded-3xl p-8 m-8">
+            <h2 class="font-bold text-[20px] mb-4">
+              Question-1: What are the different ways to select an element in
+              the DOM?
+            </h2>
+            <ul class="">
+              <p>There are many ways to select an element in DOM.Such as</p>
+              <li>getElementById(): Selects an element by its id attribute.</li>
+              <li>
+                getElementsByClassName(): Selects elements by their class name,
+                returning a live HTMLCollection.
+              </li>
+              <li>
+                getElementsByTagName(): Selects elements by their tag name,
+                returning a live HTMLCollection
+              </li>
+              <li>
+                querySelector(): Selects the first element matching a CSS
+                selector.
+              </li>
+            </ul>
+          </div>
+          <div class="blog bg-slate-300 rounded-3xl p-8 m-8">
+            <h2 class="font-bold text-[20px] mb-4">
+              Question-2: What is the difference between innerHTML, innerText,
+              and textContent ?
+            </h2>
+            <ul class="">
+              <p>The key differences is given below:</p>
+              <li>
+                innerHTML: Gets or sets the HTML content inside an element
+                (including tags).
+              </li>
+              <li>
+                innerText: Gets or sets the visible text content, ignoring HTML
+                tags and styles.
+              </li>
+              <li>
+                textContent: Gets or sets all the text content, including hidden
+                text, without HTML tags.
+              </li>
+            </ul>
+          </div>
+          <div class="blog bg-slate-300 rounded-3xl p-8 m-8">
+            <h2 class="font-bold text-[20px] mb-4">
+              Question-3: What is event delegation in the DOM?
+            </h2>
+
+            <p>
+              Event delegation involves adding a single event listener to a
+              parent element to handle events for its child elements. It takes
+              advantage of event bubbling to manage events for dynamically added
+              elements.
+            </p>
+          </div>
+          <div class="blog bg-slate-300 rounded-3xl p-8 m-8">
+            <h2 class="font-bold text-[20px] mb-4">
+              Question-4: What is event bubbling in the DOM?
+            </h2>
+
+            <p>
+              Event bubbling is when an event starts from the target element and
+              propagates upward through its ancestors.
+            </p>
+          </div>
+          <div class="blog bg-slate-300 rounded-3xl p-8 m-8">
+            <h2 class="font-bold text-[20px] mb-4">
+              Question-5: How do you create, add, and remove elements using
+              JavaScript?
+            </h2>
+
+            <p>
+              To create an element document.createElement('tag') is used. To add
+              appendChild() and to remove removeChild() is used .
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
