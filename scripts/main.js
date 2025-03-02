@@ -15,3 +15,52 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   document.querySelector(".today-date").innerHTML += `<p>${finalDate}</p>`;
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const pointsElement = document.querySelector(".points");
+  const taskAssignedElement = document.querySelector(".task-completed h1");
+  const activityLog = document.querySelector(".activity-cotainer");
+  const clearHistoryBtn = document.querySelector(".clear-btn");
+  const completedButtons = document.querySelectorAll(".btn");
+
+  completedButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      alert("Board Updated Successfully");
+
+      let currentPoints = parseInt(pointsElement.textContent);
+      let currentTasks = parseInt(taskAssignedElement.textContent);
+
+      pointsElement.textContent = currentPoints + 1;
+
+      if (currentTasks > 0) {
+        taskAssignedElement.textContent = currentTasks - 1;
+      }
+
+      const cardTitle =
+        this.parentElement.parentElement.querySelector(
+          ".card-title"
+        ).textContent;
+      const currentTime = new Date().toLocaleTimeString();
+
+      const logEntry = document.createElement("p");
+      logEntry.textContent = `You have completed the task '${cardTitle}' at ${currentTime}`;
+      logEntry.style.padding = "10px";
+      logEntry.style.backgroundColor = "white";
+      logEntry.style.borderRadius = "5px";
+      logEntry.style.marginBottom = "5px";
+      activityLog.appendChild(logEntry);
+
+      this.disabled = true;
+
+      if (currentTasks - 1 === 0) {
+        setTimeout(() => {
+          alert("You have successfully completed all the tasks");
+        }, 500);
+      }
+    });
+  });
+
+  clearHistoryBtn.addEventListener("click", function () {
+    alert("All history will be cleared");
+    activityLog.querySelectorAll("p").forEach((p) => p.remove());
+  });
+});
