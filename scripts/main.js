@@ -66,12 +66,12 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // Go to Blog Page
 document.querySelector(".blog").addEventListener("click", function () {
-  window.location.href = "../blog.html";
+  window.location.href = "blog.html";
 });
 
 // Back to HomePage
 document.querySelector(".home").addEventListener("click", function () {
-  window.location.href = "../index.html";
+  window.location.href = "index.html";
 });
 
 // random color change
