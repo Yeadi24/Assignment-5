@@ -64,16 +64,12 @@ document.addEventListener("DOMContentLoaded", function () {
     activityLog.querySelectorAll("p").forEach((p) => p.remove());
   });
 });
+
+// Back to HomePage
 // Go to Blog Page
 document.querySelector(".blog").addEventListener("click", function () {
   window.location.href = "blog.html";
 });
-
-// Back to HomePage
-document.querySelector(".home").addEventListener("click", function () {
-  window.location.href = "index.html";
-});
-
 // random color change
 const image = document.getElementById("theme-btn");
 const bodyElement = document.getElementById("change");
@@ -82,6 +78,7 @@ const colors = ["#FFDC26", "#4CAF50", "#2196F3", "#FF5722", "#9C27B0"];
 
 image.addEventListener("click", function () {
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  console.log(randomColor);
 
   bodyElement.style.backgroundColor = randomColor;
 });
