@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevBoard</title>
+    <!-- CSS file link -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- tailwind CDN -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <!-- intellisense -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- daisy UI CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              common: "#FFDC26",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+    </style>
+  </head>
+  <body class="font-poppins">
+    <header>
+      <nav
+        class="flex rounded-2xl justify-between items-center mt-4 mx-10 bg-[#b0b2b85e]"
+      >
+        <div class="logo flex justify-center items-center pl-10">
+          <img src="./assets/logo.png" alt="" />
+          <div class="logo-name">
+            <h1 class="text-[30px]">
+              Dev<span class="colorful-text font-bold text-black">Board</span>
+            </h1>
+          </div>
+        </div>
+        <div class="color flex justify-center items-center p-4">
+          <img class="mr-2" src="./assets/checkbox.png" alt="" />
+          <h1 class="points text-[20px] font-bold ml-0 mr-10">23</h1>
+          <img id="theme-btn" src="./assets/theme-btn.png" alt="" />
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="main flex pl-12 mt-10 gap-10 w-full h-[600px]">
+        <div
+          class="task-container rounded-3xl w-[65%] bg-[#b0b2b85e] flex flex-col items-start"
+        >
+          <div class="title flex justify-center items-center gap-4">
+            <div
+              class="task-completed rounded-3xl flex justify-center items-center p-6 gap-6 bg-white m-2"
+            >
+              <img src="./assets/checkbox.png" alt="" />
+              <div class="flex flex-col items-start">
+                <p>Task Assigned</p>
+                <h1 class="text-[20px] font-bold">05</h1>
+              </div>
+            </div>
+            <div
+              class="heading flex p-2 justify-center items-center gap-4 bg-gradient-to-r from-[#3752FD] via-[#6C7FFA] to-[#6C7FFA]"
+            >
+              <img class="" src="./assets/board.png" alt="" />
+              <p class="text-[20px] text-[#ffff]">
+                Discover Something New Today!
+              </p>
+            </div>
+            <div class="today-date p-8">
+              <img src="./assets/calender.png" alt="" />
+            </div>
+          </div>
+          <div class="cards">
+            <div class="card1"></div>
+          </div>
+        </div>
+        <div class="activity-cotainer w-[30%]"></div>
+      </section>
+    </main>
+    <script src="./scripts/main.js"></script>
+  </body>
+</html>
