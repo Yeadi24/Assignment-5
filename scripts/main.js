@@ -73,3 +73,15 @@ document.querySelector(".blog").addEventListener("click", function () {
 document.querySelector(".home").addEventListener("click", function () {
   window.location.href = "../index.html";
 });
+
+// random color change
+const image = document.getElementById("theme-btn");
+const bodyElement = document.getElementById("change");
+
+const colors = ["#FFDC26", "#4CAF50", "#2196F3", "#FF5722", "#9C27B0"];
+
+image.addEventListener("click", function () {
+  const randomColor = colors[Math.floor(Math.random() * colors.length)];
+
+  bodyElement.style.backgroundColor = randomColor;
+});
